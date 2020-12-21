@@ -5,3 +5,6 @@ Makefile.*
 .qmake.stash
 debug/*
 release/*
+*.dll
+*.exe
+

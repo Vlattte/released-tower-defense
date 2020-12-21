@@ -9,7 +9,6 @@ MainTower::MainTower()
 }
 
 
-
 double MainTower::distanseBetweenItems(QGraphicsItem *item)
 {
     return 47;

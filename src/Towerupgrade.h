@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QMediaPlayer>
 
-#include <Upgrades.h>
+#include "Upgrades.h"
 
 namespace Ui {
 class TowerUpgrade;
