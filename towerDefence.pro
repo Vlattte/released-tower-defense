@@ -69,6 +69,7 @@ HEADERS += \
     src\towerchoice.h \
     src\Upgrades.h
 
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
