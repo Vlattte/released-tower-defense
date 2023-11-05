@@ -4,22 +4,22 @@
 
 Chat::Chat(QGraphicsItem *parent)
 {
-    first_string  = QString ("Good");
-    second_string = QString ("Luck");
-    third_string  = QString ("Have");
-    fourth_string = QString ("Fun");
+    chat_strings[0]  = QString ("Good");
+    chat_strings[1] = QString ("Luck");
+    chat_strings[2]  = QString ("Have");
+    chat_strings[3] = QString ("Fun");
 
-    setPlainText(first_string + QString ("\n") + second_string + QString ("\n") + third_string + QString ("\n") + fourth_string);
+    setPlainText(chat_strings[1] + QString ("\n") + chat_strings[1] + QString ("\n") + chat_strings[2] + QString ("\n") + chat_strings[3]);
     setDefaultTextColor(Qt::cyan);
     setFont(QFont("Helvetica [Cronyx]", 8));
 }
 
 void Chat::addText(QString string)
 {
-    fourth_string = third_string;
-    third_string  = second_string;
-    second_string = first_string;
-    first_string  = string;
+    chat_strings[3] = chat_strings[2];
+    chat_strings[2]  = chat_strings[1];
+    chat_strings[1] = chat_strings[1];
+    chat_strings[0]  = string;
 
-    setPlainText(first_string + QString ("\n") + second_string + QString ("\n") + third_string + QString ("\n") + fourth_string);
+    setPlainText(chat_strings[1] + QString ("\n") + chat_strings[1] + QString ("\n") + chat_strings[2] + QString ("\n") + chat_strings[3]);
 }

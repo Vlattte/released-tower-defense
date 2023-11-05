@@ -98,10 +98,6 @@ void FireBall::move()
             QList <QGraphicsItem *> colliding_items = collidingItems();
             for (int i = 0; i < colliding_items.size(); ++i)
             {
-                if ((typeid(*(colliding_items[i])) == typeid(Goblin) ||
-                     typeid(*(colliding_items[i])) == typeid(BigGoblin)) ||
-                     typeid(*(colliding_items[i])) == typeid(Skeleton))
-                {
                     //check enemy health
                     if (typeid(*(colliding_items[i])) == typeid(Goblin))
                     {
@@ -183,7 +179,6 @@ void FireBall::move()
                         }
                     }
                     delete this;
-                }
             }
         }
     }

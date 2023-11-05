@@ -10,9 +10,9 @@
 struct map_varieties
 {
     //points for player things
-    QPointF base_point;         //place of the base
-    QPointF tbp[10];            //tower builder points
-    QPointF finish;             //near base point
+    QPointF base_point;         		//place of the base
+    QPointF tower_builder_points[10];   //tower builder points
+    QPointF finish;             		//near base point
 
     //background
     QString map_name;           //name of background image

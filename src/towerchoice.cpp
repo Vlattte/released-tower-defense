@@ -30,7 +30,7 @@ TowerChoice::~TowerChoice()
 }
 
 
-void TowerChoice::on_pushButton_clicked()
+void TowerChoice::buildArrowTower()
 {
     if (game->gold->getGold() >= 200)
     {
@@ -40,7 +40,7 @@ void TowerChoice::on_pushButton_clicked()
     }
     else
     {
-        game->chat->addText("Not enough gold for simple tower, my Lord!");
+        game->chat->addText("Not enough gold for arrow tower, my Lord!");
 
         //sound of lake of gold
         if (not_enough_gold->state() == QMediaPlayer::PlayingState)
@@ -57,7 +57,7 @@ void TowerChoice::on_pushButton_clicked()
     close();
 }
 
-void TowerChoice::on_pushButton_2_clicked()
+void TowerChoice::buildFireBallTower()
 {
     if (game->gold->getGold() >= 400)
     {
@@ -84,7 +84,7 @@ void TowerChoice::on_pushButton_2_clicked()
     close();
 }
 
-void TowerChoice::on_pushButton_3_clicked()
+void TowerChoice::buildStoneTower()
 {
     if (game->gold->getGold() >= 300)
     {
@@ -111,7 +111,7 @@ void TowerChoice::on_pushButton_3_clicked()
     close();
 }
 
-void TowerChoice::on_pushButton_4_clicked()
+void TowerChoice::close_button()
 {
     this->close();
 }
