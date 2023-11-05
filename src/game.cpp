@@ -24,6 +24,10 @@ extern int pause;
 
 Game::Game(number_of_map map_num) : QGraphicsView()
 {  
+	gold = new Gold();
+    chat = new Chat();
+	base_health = new Health();
+
     //set map settings
     settings.set_varieties(map_num);
     mn = map_num;

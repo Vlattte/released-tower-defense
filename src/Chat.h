@@ -9,10 +9,7 @@ public:
     Chat(QGraphicsItem * parent = nullptr);
     void addText(QString string);
 
-    QString first_string;
-    QString second_string;
-    QString third_string;
-    QString fourth_string;
+	QString[4] chat_strings;
 };
 
 #endif // CHAT_H

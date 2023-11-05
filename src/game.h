@@ -28,9 +28,9 @@ public:
     QGraphicsPixmapItem * cursor;
     MainTower * build;
 
-    Health * base_health = new Health();
-    Gold * gold = new Gold();
-    Chat * chat = new Chat();
+    Health * base_health;
+    Gold * gold;
+    Chat * chat;
 
     int pause = 1;
 

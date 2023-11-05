@@ -62,9 +62,9 @@ BigGoblin::BigGoblin(QGraphicsItem* parent)
     if (way_num == 1)
     {
         setPos(FP.start);
-        list_of_points << FP.a0 << FP.a1 << FP.a2
-                       << FP.a3 << FP.a << FP.b << FP.c << FP.d << FP.e << FP.f
-                       << FP.g << FP.h << FP.i << FP.j << game->settings.variety.finish;
+		
+        list_of_points = 
+		settings.variety.finish;
     }
     else if (way_num == 2)
     {
@@ -93,43 +93,6 @@ BigGoblin::~BigGoblin()
     delete victory;
     delete lose;
 }
-
-//void BigGoblin::rotate(QPointF point)
-//{
-//    QLineF line(pos(),point);
-//    setRotation(-1 * line.angle());
-//}
-
-//void BigGoblin::decreaseHealth(int damage)
-//{
-//    enemy_health -= damage;
-//    health_label->setText(QString::number(enemy_health));
-
-//    //sound of goblins death
-//    if (goblin_pain->state() == QMediaPlayer::PlayingState)
-//    {
-//        goblin_pain->setPosition(0);
-//    }
-//    else if (goblin_pain->state() == QMediaPlayer::StoppedState)
-//    {
-//        goblin_pain->play();
-//    }
-//}
-
-//int BigGoblin::getHealth() const
-//{
-//    return enemy_health;
-//}
-
-//void BigGoblin::chooseWay()
-//{
-//    //================random=enemy=move=======================
-//    int lowest = 1, highest = 2;
-//    int range = (highest-lowest) + 1;
-//    random_dest = lowest + int(range * (rand() / (RAND_MAX + 1.0)));
-//    way_num = lowest + int(range * (rand() / (RAND_MAX + 1.0)));
-//    //========================================================
-//}
 
 void BigGoblin::move()
 {
